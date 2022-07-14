@@ -17,3 +17,10 @@ def get_random_list(size: int, min=-100, max=101) -> list:
     for i in range(size):
         list_number.append(rand(min, max))
     return list_number
+
+
+def get_fractional_part(number: float) -> int:
+    try:
+        return int(str(number).split('.')[1])
+    except ValueError:
+        return 0
